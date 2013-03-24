@@ -1,4 +1,4 @@
 gamut
 =====
 
-jQuery plugin for heatmaps
+jQuery plugin for heatmaps and things
