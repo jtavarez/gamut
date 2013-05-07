@@ -1,1 +1,208 @@
-My Github Page
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Gamut</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <!-- <link rel='stylesheet' type='text/css' media='all' href='css/bootstrap.css' /> -->
+  <link rel='stylesheet' type='text/css' media='all' href='css/normalize.css' />
+  <link rel='stylesheet' type='text/css' media='all' href='css/prettify.css' />
+  <link rel='stylesheet' type='text/css' media='all' href='css/screen.css' />
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+  <script type="text/javascript" src="js/jquery.gamut-0.7.js"></script>
+  <script type="text/javascript" src="js/js.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+</head>
+<body>
+
+<div id="wrapper">
+
+<div id="masthead">
+
+<div id="header">
+<h1>jQuery Gamut</h1>
+</div>
+
+</div>
+
+<div id="container">
+  
+  
+  <div class="left">
+    <ul>
+      <li>Download</li>
+      <li>Getting Started</li>
+      <li>Parameters</li>
+      <li>Examples</li>
+    </ul>
+  </div>    
+
+  <div class="right">
+  
+
+  
+          
+  
+          <h2>Gamut finds the range of numbers in element provided, along with an array of 2 or more colors, and does the task of associating each point in the range to the color in the spectrum (or gamut. Get it?). It's easy enough to use with tables or other elements where you want to associate data with color.</h2>
+
+  
+            <a href="#" class="download">Download <span>Version 0.7</span></a>
+            <a class="view">or view on Github</a>
+
+  
+              <h3>Getting Started</h3>
+              <ol>
+                <li>Download the js file and link to it from the web page</li>
+                <li>Call the gamut() function. This requires 2 parameters to get started:</li>
+              </ol>
+
+<pre class="prettify">
+$('table').gamut({
+  item : 'td',
+  colorArray: ['ff0000', '000000']
+});
+</pre>
+
+              <p>Boom! That’s it! Check out the available parameters here for further customization</p>
+            
+
+          <h3>Parameters</h3>
+
+          <h3>Examples</h3>
+
+
+<h4 class="example_header">Basic Color Usage</h4>
+
+<div class="example_section">
+
+<table id="example_1">
+  <tbody><tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr><tr><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr><tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr><tr><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr><tr><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td></tr><tr><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td></tr><tr><td>31</td><td>32</td><td>33</td><td>34</td><td>35</td></tr><tr><td>36</td><td>37</td><td>38</td><td>39</td><td>40</td></tr><tr><td>41</td><td>42</td><td>43</td><td>44</td><td>45</td></tr><tr><td>46</td><td>47</td><td>48</td><td>49</td><td>50</td></tr></tbody>
+</table>
+
+
+<pre>
+$('#example_1').gamut({
+  item: 'td',
+  colorArray: ['fef89a', 'ff9000', 'ff0000', '000000'],
+});</pre>
+
+<p>Basic example showing how the plugin can accept an array of two or more colors. When more than two, the colors will be evenly distributed across the spectrum (so in the example above, yellow at 0%, orange at 33%, red at 66%, black at 100%)</p>
+
+</div><!-- .example_section -->
+
+
+<h4 class="example_header">Basic Color Usage #2</h4>
+
+<div class="example_section">
+
+<table id="example_2">
+  <tbody>
+    <tr class="firstRow">
+      <td class="United States-cell" colspan=8>Total man-made emissions by year in the US</td>  
+
+    </tr>
+    <tr>
+      <td class="Country-cell">Pollutant</td>
+      <td class="United States-cell">2006</td>
+      <td class="-cell">2007</td>
+      <td class="-cell">2008</td>
+      <td class="-cell">2009</td>
+      <td class="-cell">2010</td>
+      <td class="-cell">2011</td>
+      <td class="-cell">2012</td>
+    </tr>
+    <tr>
+      <td class="Country-cell">Sulphur Oxides</td>
+      <td class="data-cell United States-cell">12042.5</td>   
+      <td class="data-cell">10685.3</td>
+      <td class="data-cell">9328.2</td>
+      <td class="data-cell">7455.8</td>
+      <td class="data-cell">6811.5</td>
+      <td class="data-cell">6167.6</td>
+      <td class="data-cell">4936.8</td>
+    </tr>
+    <tr>
+      <td class="Country-cell">Nitrogen Oxides</td>
+      <td class="data-cell United States-cell">16633.9</td>
+      <td class="data-cell">16074.2</td>
+      <td class="data-cell">15514.4</td>
+      <td class="data-cell">14140.1</td>
+      <td class="data-cell">13264.0</td>
+      <td class="data-cell">11899.0</td>
+      <td class="data-cell">10252.2</td>
+    </tr>
+    <tr>
+      <td class="Country-cell">Particulates (PM10)</td>
+      <td class="data-cell United States-cell">18475.4</td>
+      <td class="data-cell">18499.6</td>
+      <td class="data-cell">18523.7</td>
+      <td class="data-cell">18506.4</td>
+      <td class="data-cell">18470.9</td>
+      <td class="data-cell">18426.2</td>
+      <td class="data-cell">18381.1</td>
+    </tr>
+    <tr>
+      <td class="Country-cell">Particulates (PM2.5)</td>
+      <td class="data-cell United States-cell">4418.7</td> 
+      <td class="data-cell">4501.6</td>
+      <td class="data-cell">4584.5</td>
+      <td class="data-cell">4564.0</td>
+      <td class="data-cell">4522.6</td>
+      <td class="data-cell">4468.8</td>
+      <td class="data-cell">4411.3</td>
+    </tr>
+    <tr>
+      <td class="Country-cell">Carbon Monoxide</td>
+      <td class="data-cell United States-cell">72245.2</td>
+      <td class="data-cell">67818.4</td>
+      <td class="data-cell">63391.7</td>
+      <td class="data-cell">61680.7</td>
+      <td class="data-cell">58080.0</td>
+      <td class="data-cell">53194.1</td>
+      <td class="data-cell">47607.5</td>
+    </tr>
+    <tr class="lastRow">
+      <td class="Country-cell">Non-methane Volatile Organic Compounds</td>
+      <td class="data-cell United States-cell">14457.0</td>
+      <td class="data-cell">13970.0</td>
+      <td class="data-cell">13483.0</td>
+      <td class="data-cell">13285.9</td>
+      <td class="data-cell">12859.0</td>
+      <td class="data-cell">12283.7</td>
+      <td class="data-cell">11634.4</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<pre>
+$('#example_1').gamut({
+  item: 'td',
+  colorArray: ['fef89a', 'ff9000', 'ff0000', '000000'],
+});</pre>
+
+<p>Basic example showing how the plugin can accept an array of two or more colors. When more than two, the colors will be evenly distributed across the spectrum (so in the example above, yellow at 0%, orange at 33%, red at 66%, black at 100%)</p>
+
+</div><!-- .example_section -->
+
+
+
+
+  </div><!-- .right -->    
+
+
+</div><!-- #container -->
+
+
+</div><!-- #wrapper -->
+
+<!-- <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=js"></script> -->
+<!-- <script type="text/javascript" src="js/run_prettify.js"></script> -->
+
+</body>
+</html>
